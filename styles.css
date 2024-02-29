@@ -8,7 +8,7 @@
 }
 body{
   font-family: monospace;
-  height: 100vh;
+  height: 100%;
 }
 .nav{
   display: flex;
@@ -126,7 +126,7 @@ body{
   background-color: rgb(133, 116, 44);
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1500px){
   .nav .leftMenu .logo{
     font-size: 19px;
   }
@@ -163,8 +163,19 @@ body{
     background-color: rgba(177, 151, 80, 0.568);
   }
 }
-@media (max-width: 850px){
-  
+@media (max-width: 1050px){
+  body{
+    height: 100%;
+    width: 100vh;
+    overflow: hidden;
+  }
+  .main{
+    overflow: hidden;
+  }
+  .background{
+    display: block;
+    background: url(img/backgroundSide.jpg);
+  }
   .rightMenu button{
     display: none;
   }
@@ -206,5 +217,25 @@ body{
   }
   .nav ul li{
     display: block;
+  }
+  .imageSide{
+    display: none;
+  }
+  .textContainer{
+    width: 70%;
+    margin: 20vh 0 0 10%;
+    padding: 0  300px 0 0 ;
+  }
+  .textContainer .title{
+    font-size: 75px;
+  }
+  .textContainer a{
+    font-size: 30px;
+  }
+  .main button{
+    font-size: 15px;
+    padding: 17px;
+    background-color: transparent;
+    margin-top: 20px;
   }
 }
