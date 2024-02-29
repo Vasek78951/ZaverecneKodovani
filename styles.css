@@ -96,6 +96,8 @@ body{
   background: url(img/background.jpg) no-repeat;
   background-size: cover;
   height: calc(100vh - 80px);
+  flex-wrap: wrap;
+  align-content: start;
 }
 .imageSide{
   height: 100%;
@@ -125,6 +127,78 @@ body{
 .main button:hover{
   background-color: rgb(133, 116, 44);
 }
+.headInfo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 30%;
+}
+.leftContact{
+  width: 50%;
+  height: 50%;
+  padding: 0 50px 0 50px;
+}
+.headInfo a{
+  width: fit-content;
+  font-size: 40px;
+  margin-top:10px;
+  color: white;
+  display: block;
+}
+
+.leftContact a{
+  width: fit-content;
+  font-size: 30px;
+  color: white;
+  display: block;
+}
+.TextC{
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+.rightContact{
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 50%;
+  padding: 0 50px 0 50px;
+}
+.rightContact input{
+  color: white;
+  font-size: 200%;
+  padding-left: 10px;
+  overflow: hidden;
+  background-color: transparent;
+  border: white solid 4px;
+}
+.rightContact textarea{
+  color: white;
+  font-size: 35px;
+  padding: 10px 0 0 10px;
+  overflow: hidden;
+  background-color: transparent;
+  border: white solid 4px;
+}
+.rightContact .areaHalf{
+  width: 49%;
+  height: 20%;
+}
+.rightContact .areaSubject{
+  width: 100%;
+  height: 20%;
+}
+.rightContact .areaMessage{
+  width: 100%;
+  height: 56%;
+}
+::placeholder{
+  color: white;
+}
 
 @media (max-width: 1500px){
   .nav .leftMenu .logo{
@@ -144,6 +218,7 @@ body{
     font-size: 30px;
   }
   .background{
+    flex-direction: column;
     justify-content: center;
   }
   .imageSide{
@@ -162,18 +237,25 @@ body{
     font-weight: bold;
     background-color: rgba(177, 151, 80, 0.568);
   }
+  .leftContact a{
+    width: 100%;
+    font-size: 20px;
+  }
+  .rightContact{
+    width: 100%;
+    margin-top: 50px;
+    height: 30%;
+  }
+  .headInfo{
+    height: 20%;
+  }
+  .leftContact{
+    height: 30%;
+  }
 }
 @media (max-width: 1050px){
-  body{
-    height: 100%;
-    width: 100vh;
-    overflow: hidden;
-  }
-  .main{
-    overflow: hidden;
-  }
   .background{
-    display: block;
+    display: flex;
     background: url(img/backgroundSide.jpg);
   }
   .rightMenu button{
@@ -222,9 +304,7 @@ body{
     display: none;
   }
   .textContainer{
-    width: 70%;
-    margin: 20vh 0 0 10%;
-    padding: 0  50px 0 0 ;
+    width: 90%;
   }
   .textContainer .title{
     font-size: 75px;
@@ -237,5 +317,20 @@ body{
     padding: 17px;
     background-color: transparent;
     margin-top: 20px;
+  }
+  .leftContact{
+    width: 100%;
+    height: 30%;
+  }
+  .rightContact{
+    width: 100%;
+    margin-top: 50px;
+    height: 30%;
+  }
+  .headInfo{
+    height: 20%;
+  }
+  .leftContact a{
+    font-size: 20px;
   }
 }
